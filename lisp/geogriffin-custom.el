@@ -1,0 +1,275 @@
+;;; geogriffin-custom.el --- geogriffin's emacs customization file.
+;; -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;;; Code:
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
+ '(async-shell-command-buffer 'rename-buffer)
+ '(auth-source-gpg-encrypt-to
+   (with-temp-buffer
+     (insert-file-contents "~/.password-store/.gpg-id")
+     (split-string
+      (buffer-string)
+      "
+" t)))
+ '(auth-sources '("~/.authinfo.gpg"))
+ '(c-basic-offset 2)
+ '(column-number-mode t)
+ '(comment-column 80)
+ '(comment-fill-column 160)
+ '(company-backends '(company-lsp company-files))
+ '(company-begin-commands
+   '(self-insert-command org-self-insert-command orgtbl-self-insert-command c-scope-operator c-electric-colon c-electric-lt-gt c-electric-slash))
+ '(company-frontends
+   '(company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend company-preview-common-frontend))
+ '(company-idle-delay 0)
+ '(company-require-match ''company-explicit-action-p)
+ '(company-selection-wrap-around t)
+ '(company-show-numbers t)
+ '(company-tooltip-idle-delay 0.1)
+ '(company-transformers '(company-sort-by-backend-importance))
+ '(compilation-always-kill t)
+ '(compilation-context-lines 5)
+ '(compilation-scroll-output 'first-error)
+ '(compilation-skip-threshold 2)
+ '(compilation-window-height 40)
+ '(custom-enabled-themes '(deeper-blue))
+ '(default-frame-alist '((width . 120) (left-fringe) (right-fringe)))
+ '(desktop-lazy-idle-delay 180)
+ '(desktop-restore-eager 20)
+ '(desktop-restore-in-current-display nil)
+ '(desktop-save t)
+ '(desktop-save-mode t)
+ '(dired-listing-switches "-lh")
+ '(display-time-24hr-format t)
+ '(display-time-day-and-date t)
+ '(display-time-format "%m/%d %H:%M")
+ '(display-time-mode t)
+ '(ediff-window-setup-function 'ediff-setup-windows-plain)
+ '(edts-dialyzer-inhibit-on-compile nil)
+ '(electric-pair-mode t)
+ '(erlang-electric-newline-inhibit nil)
+ '(erlang-new-clause-with-arguments t)
+ '(fill-column 120)
+ '(flycheck-check-syntax-automatically
+   '(save idle-change idle-buffer-switch new-line mode-enabled))
+ '(flycheck-display-errors-delay 0.3)
+ '(flycheck-erlang-dialyzer-executable nil)
+ '(flycheck-erlang-include-path '("../include"))
+ '(flycheck-indication-mode 'right-fringe)
+ '(flycheck-keymap-prefix "c")
+ '(frame-auto-hide-function 'delete-frame)
+ '(fringe-mode nil nil (fringe))
+ '(global-flycheck-mode t)
+ '(global-semantic-idle-completions-mode nil nil (semantic/idle))
+ '(global-semantic-idle-local-symbol-highlight-mode nil nil (semantic/idle))
+ '(global-semantic-idle-summary-mode nil)
+ '(global-whitespace-mode t)
+ '(grep-command
+   "grep --color -nH --null --exclude=*~ --exclude-dir=.git -e ")
+ '(grep-find-command
+   '("find . -type f -exec grep --color -nH --null --exclude=*~ --exclude-dir=.git -e /dev/null \\{\\} +" . 80))
+ '(highlight-symbol-idle-delay 0.2)
+ '(highlight-symbol-occurrence-message nil)
+ '(hiwin-mode t)
+ '(iconify-child-frame 'make-invisible)
+ '(ido-auto-merge-work-directories-length -1)
+ '(ido-case-fold t)
+ '(ido-enable-dot-prefix t)
+ '(ido-enable-flex-matching t)
+ '(ido-mode 'both nil (ido))
+ '(ido-use-virtual-buffers t)
+ '(indent-tabs-mode nil)
+ '(indicate-buffer-boundaries 'right)
+ '(indicate-empty-lines t)
+ '(inhibit-startup-echo-area-message "geogriffin")
+ '(inhibit-startup-screen t)
+ '(initial-scratch-message nil)
+ '(java-mode-hook '(subword-mode))
+ '(lsp-clients-clangd-executable "clangd-8")
+ '(lsp-enable-snippet nil)
+ '(lsp-file-watch-ignored
+   '(".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build"))
+ '(lsp-keep-workspace-alive nil)
+ '(lsp-prefer-flymake nil)
+ '(lsp-restart 'ignore)
+ '(lsp-ui-doc-enable nil)
+ '(lsp-ui-doc-header t)
+ '(lsp-ui-doc-include-signature t)
+ '(lsp-ui-doc-position 'at-point)
+ '(lsp-ui-flycheck-enable t)
+ '(lsp-ui-sideline-ignore-duplicate t)
+ '(lsp-ui-sideline-show-diagnostics nil)
+ '(lsp-ui-sideline-show-hover t)
+ '(lsp-ui-sideline-update-mode 'point)
+ '(menu-bar-mode nil)
+ '(package-archives
+   '(("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "https://melpa.org/packages/")))
+ '(package-enable-at-startup t)
+ '(package-selected-packages
+   '(use-package-hydra hydra protobuf-mode use-package flycheck-inline magit-libgit lsp-ui magit-popup company-lsp lsp-java ansible ansible-doc company-ansible poly-ansible rmsbolt rust-auto-use rust-playground cargo lua-mode disaster yaml-mode hcl-mode flycheck markdown-preview-eww markdown-mode highlight-symbol hiwin magit erlang))
+ '(proced-auto-update-interval 1)
+ '(proced-format-alist
+   '((short pid euid tree pri rss majflt state pcpu start time
+            (args comm))
+     (medium pid euid tree pcpu pmem vsize rss ttname state start time
+             (args comm))
+     (long user euid group pid tree pri nice pcpu pmem vsize rss ttname state start time
+           (args comm))
+     (verbose user euid group egid pid ppid tree pgrp sess pri nice pcpu pmem state thcount vsize rss ttname tpgid minflt majflt cminflt cmajflt start time utime stime ctime cutime cstime etime
+              (args comm))))
+ '(proced-grammar-alist
+   '((euid "EUID" "%d" right proced-< nil
+           (euid pid)
+           (nil t nil))
+     (user "User" nil left proced-string-lessp nil
+           (user pid)
+           (nil t nil))
+     (egid "EGID" "%d" right proced-< nil
+           (egid euid pid)
+           (nil t nil))
+     (group "Group" nil left proced-string-lessp nil
+            (group user pid)
+            (nil t nil))
+     (comm "Command" nil left proced-string-lessp nil
+           (comm pid)
+           (nil t nil))
+     (state "S" nil left proced-string-lessp nil
+            (state pid)
+            (nil t nil))
+     (ppid "PPID" "%d" right proced-< nil
+           (ppid pid)
+           ((lambda
+              (ppid)
+              (proced-filter-parents proced-process-alist ppid))
+            "refine to process parents"))
+     (pgrp "PGrp" "%d" right proced-< nil
+           (pgrp euid pid)
+           (nil t nil))
+     (sess "Sess" "%d" right proced-< nil
+           (sess pid)
+           (nil t nil))
+     (ttname "TTY" proced-format-ttname left proced-string-lessp nil
+             (ttname pid)
+             (nil t nil))
+     (tpgid "TPGID" "%d" right proced-< nil
+            (tpgid pid)
+            (nil t nil))
+     (minflt "MinFlt" "%d" right proced-< nil
+             (minflt pid)
+             (nil t t))
+     (majflt "MajFlt" "%d" right proced-< nil
+             (majflt pid)
+             (nil t t))
+     (cminflt "CMinFlt" "%d" right proced-< nil
+              (cminflt pid)
+              (nil t t))
+     (cmajflt "CMajFlt" "%d" right proced-< nil
+              (cmajflt pid)
+              (nil t t))
+     (utime "UTime" proced-format-time right proced-time-lessp t
+            (utime pid)
+            (nil t t))
+     (stime "STime" proced-format-time right proced-time-lessp t
+            (stime pid)
+            (nil t t))
+     (time "Time" proced-format-time right proced-time-lessp t
+           (time pid)
+           (nil t t))
+     (cutime "CUTime" proced-format-time right proced-time-lessp t
+             (cutime pid)
+             (nil t t))
+     (cstime "CSTime" proced-format-time right proced-time-lessp t
+             (cstime pid)
+             (nil t t))
+     (ctime "CTime" proced-format-time right proced-time-lessp t
+            (ctime pid)
+            (nil t t))
+     (pri "Pr" "%d" right proced-< t
+          (pri pid)
+          (nil t t))
+     (nice "Ni" "%3d" 3 proced-< t
+           (nice pid)
+           (t t nil))
+     (thcount "THCount" "%d" right proced-< t
+              (thcount pid)
+              (nil t t))
+     (start "Start" proced-format-start 6 proced-time-lessp nil
+            (start pid)
+            (t t nil))
+     (vsize "VSize" "%d" right proced-< t
+            (vsize pid)
+            (nil t t))
+     (rss "RSS" "%d" right proced-< t
+          (rss pid)
+          (nil t t))
+     (etime "ETime" proced-format-time right proced-time-lessp t
+            (etime pid)
+            (nil t t))
+     (pcpu "%CPU" "%.1f" right proced-< t
+           (pcpu pid)
+           (nil t t))
+     (pmem "%Mem" "%.1f" right proced-< t
+           (pmem pid)
+           (nil t t))
+     (args "Args" proced-format-args left proced-string-lessp nil
+           (args pid)
+           (nil t nil))
+     (pid "PID" "%d" right proced-< nil
+          (pid)
+          ((lambda
+             (ppid)
+             (proced-filter-children proced-process-alist ppid))
+           "refine to process children"))
+     (tree "Tree" proced-format-tree left nil nil nil nil)))
+ '(racer-cmd "/home/geogriffin/bin/racer")
+ '(recentf-max-saved-items 100)
+ '(recentf-mode t)
+ '(rust-always-locate-project-on-open t)
+ '(rust-indent-method-chain t)
+ '(save-place-mode t)
+ '(savehist-mode t)
+ '(scroll-bar-mode nil)
+ '(semantic-default-submodes
+   '(global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-stickyfunc-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode global-semantic-idle-local-symbol-highlight-mode global-semantic-highlight-edits-mode))
+ '(semantic-idle-scheduler-idle-time 0.1)
+ '(semantic-mode nil)
+ '(shell-completion-execonly nil)
+ '(show-paren-mode t)
+ '(size-indication-mode t)
+ '(tool-bar-mode nil)
+ '(tramp-auto-save-directory "~/.emacs.d/auto-saves/")
+ '(tramp-connection-timeout 10)
+ '(use-dialog-box nil)
+ '(use-file-dialog nil)
+ '(wdired-allow-to-change-permissions 'advanced)
+ '(wdired-use-dired-vertical-movement 'sometimes)
+ '(whitespace-style
+   '(face trailing empty indentation::space space-before-tab::tab tab-mark))
+ '(xterm-mouse-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "DAMA" :family "Ubuntu Mono"))))
+ '(hiwin-face ((t (:background "unspecified-bg"))))
+ '(lsp-ui-sideline-global ((t (:background "gray17"))))
+ '(magit-diff-added ((t (:background "#335533" :foreground "black"))))
+ '(magit-diff-added-highlight ((t (:background "green" :foreground "black"))))
+ '(magit-diff-removed ((t (:background "#553333" :foreground "black"))))
+ '(magit-diff-removed-highlight ((t (:background "#663333" :foreground "black"))))
+ '(whitespace-empty ((t (:background "red"))))
+ '(whitespace-indentation ((t (:background "red"))))
+ '(whitespace-space-before-tab ((t (:background "red")))))
+
+;;; geogriffin-custom.el ends here
