@@ -79,7 +79,6 @@
    '("find . -type f -exec grep --color -nH --null --exclude=*~ --exclude-dir=.git -e /dev/null \\{\\} +" . 80))
  '(highlight-symbol-idle-delay 0.2)
  '(highlight-symbol-occurrence-message nil)
- '(hiwin-mode t)
  '(iconify-child-frame 'make-invisible)
  '(ido-auto-merge-work-directories-length -1)
  '(ido-case-fold t)
@@ -116,7 +115,7 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-enable-at-startup t)
  '(package-selected-packages
-   '(use-package-hydra hydra protobuf-mode use-package flycheck-inline magit-libgit lsp-ui magit-popup company-lsp lsp-java ansible ansible-doc company-ansible poly-ansible rmsbolt rust-auto-use rust-playground cargo lua-mode disaster yaml-mode hcl-mode flycheck markdown-preview-eww markdown-mode highlight-symbol hiwin magit erlang))
+   '(use-package magit-libgit lsp-ui magit-popup company-lsp flycheck markdown-mode highlight-symbol magit))
  '(proced-auto-update-interval 1)
  '(proced-format-alist
    '((short pid euid tree pri rss majflt state pcpu start time
@@ -231,7 +230,6 @@
              (proced-filter-children proced-process-alist ppid))
            "refine to process children"))
      (tree "Tree" proced-format-tree left nil nil nil nil)))
- '(racer-cmd "/home/geogriffin/bin/racer")
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(rust-always-locate-project-on-open t)
