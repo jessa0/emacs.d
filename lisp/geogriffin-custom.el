@@ -58,6 +58,7 @@
  '(display-time-day-and-date t)
  '(display-time-format "%m/%d %H:%M")
  '(display-time-mode t)
+ '(echo-keystrokes 0.1)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(edts-dialyzer-inhibit-on-compile nil)
  '(electric-pair-mode t)
