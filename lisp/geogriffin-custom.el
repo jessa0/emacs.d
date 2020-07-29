@@ -42,6 +42,7 @@
  '(compilation-scroll-output 'first-error)
  '(compilation-skip-threshold 2)
  '(compilation-window-height 40)
+ '(create-lockfiles nil)
  '(custom-enabled-themes '(deeper-blue))
  '(default-frame-alist '((width . 120) (left-fringe) (right-fringe)))
  '(desktop-lazy-idle-delay 86400)
