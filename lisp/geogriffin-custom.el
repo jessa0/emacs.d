@@ -242,6 +242,7 @@
  '(semantic-idle-scheduler-idle-time 0.1)
  '(semantic-mode nil)
  '(shell-completion-execonly nil)
+ '(show-paren-delay 0)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(tool-bar-mode nil)
