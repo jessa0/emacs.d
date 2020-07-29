@@ -143,4 +143,7 @@
 
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 
+;; Improve performance of very long lines
+(setq-default bidi-display-reordering 'left-to-right)
+
 ;;; geogriffin.el ends here
