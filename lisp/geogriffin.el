@@ -114,7 +114,12 @@
 
 (put 'narrow-to-region 'disabled nil)
 
-(global-set-key (kbd "M-0")    #'kill-current-buffer)
+(global-set-key (kbd "C-z")    #'undo)
+(global-set-key (kbd "M-o")    #'other-window)
+(global-set-key (kbd "M-0")    #'kill-buffer-and-window)
+(global-set-key (kbd "M-1")    #'delete-other-windows)
+(global-set-key (kbd "M-2")    #'split-window-vertically)
+(global-set-key (kbd "M-3")    #'split-window-horizontally)
 (global-set-key (kbd "C-c $")  #'toggle-truncate-lines)
 (global-set-key (kbd "C-|")    #'align-regexp)
 (global-set-key (kbd "M-[")    #'highlight-symbol-prev)
@@ -126,6 +131,8 @@
 (global-set-key (kbd "M-<f5>") #'my-flycheck-compile)
 (global-set-key (kbd "M-<f6>") #'my-flycheck-compile)
 
+(global-set-key (kbd "<mouse-8>") #'xref-pop-marker-stack)
+(global-set-key (kbd "<mouse-9>") #'xref-find-definitions)
 ;(global-set-key (kbd "<mouse-4>") #'scroll-up-line)
 ;(global-set-key (kbd "<mouse-5>") #'scroll-down-line)
 
