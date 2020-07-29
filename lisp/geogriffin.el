@@ -32,19 +32,17 @@
   :mode "Cargo\\.toml\\'"
   :hook (rust-mode))
 
-(use-package lsp
-  :commands lsp
-  :hook rust-mode
-  :bind (:map lsp-mode-map ("<f2>" . #'lsp-rename)
-         :map lsp-mode-map ("M-RET" . #'lsp-execute-code-action)))
-
-(use-package lsp-ui
-  :after (lsp)
-  :bind (:map lsp-ui-mode-map ("<f1>"                        . #'lsp-ui-doc-mode)
-         :map lsp-ui-mode-map ([remap xref-find-definitions] . #'lsp-ui-peek-find-definitions)
-         :map lsp-ui-mode-map ([remap xref-find-references]  . #'lsp-ui-peek-find-references)
-         :map lsp-ui-mode-map ([remap highlight-symbol-prev] . #'lsp-ui-peek-jump-backward)
-         :map lsp-ui-mode-map ([remap highlight-symbol-next] . #'lsp-ui-peek-jump-forward)))
+(use-package lsp-mode
+  :commands lsp-deferred
+  :hook ((c-mode rust-mode erlang-mode) . lsp-deferred)
+  :bind (:map lsp-mode-map
+              (("M-RET"                       . #'lsp-execute-code-action)
+               ("s-l g u"                     . #'lsp-rust-find-parent-module)
+               ("s-l ^"                       . #'lsp-rust-analyzer-join-lines)
+               ([remap xref-find-definitions] . #'lsp-ui-peek-find-definitions)
+               ([remap xref-find-references]  . #'lsp-ui-peek-find-references)
+               ([remap highlight-symbol-prev] . #'lsp-ui-peek-jump-backward)
+               ([remap highlight-symbol-next] . #'lsp-ui-peek-jump-forward))))
 
 (use-package flycheck
   :config
