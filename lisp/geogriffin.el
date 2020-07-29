@@ -90,7 +90,7 @@
 
 (defun my-compile (command)
   (interactive (list (compilation-read-command (eval compile-command))))
-  (compile command nil))
+  (compile command t))
 
 (defun my-recompile ()
   (interactive)
