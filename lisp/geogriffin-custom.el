@@ -241,6 +241,7 @@
    '(global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-stickyfunc-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode global-semantic-idle-local-symbol-highlight-mode global-semantic-highlight-edits-mode))
  '(semantic-idle-scheduler-idle-time 0.1)
  '(semantic-mode nil)
+ '(sentence-end-double-space nil)
  '(shell-completion-execonly nil)
  '(shift-select-mode nil)
  '(show-paren-delay 0)
