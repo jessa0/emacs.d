@@ -91,6 +91,7 @@
  '(indicate-empty-lines t)
  '(inhibit-startup-echo-area-message "geogriffin")
  '(inhibit-startup-screen t)
+ '(initial-major-mode 'org-mode)
  '(initial-scratch-message nil)
  '(java-mode-hook '(subword-mode))
  '(lsp-clients-clangd-executable "clangd-8")
