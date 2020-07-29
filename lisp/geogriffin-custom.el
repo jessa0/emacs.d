@@ -61,6 +61,7 @@
  '(echo-keystrokes 0.1)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(edts-dialyzer-inhibit-on-compile nil)
+ '(eldoc-minor-mode-string nil)
  '(electric-pair-mode t)
  '(erlang-electric-newline-inhibit nil)
  '(erlang-new-clause-with-arguments t)
