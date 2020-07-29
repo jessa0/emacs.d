@@ -141,4 +141,6 @@
 
 (setq auto-window-vscroll nil)
 
+(setq frame-title-format '(buffer-file-name "%f" ("%b")))
+
 ;;; geogriffin.el ends here
