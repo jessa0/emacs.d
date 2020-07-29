@@ -266,7 +266,8 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray80" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "DAMA" :family "Ubuntu Mono"))))
  '(hiwin-face ((t (:background "unspecified-bg"))))
- '(lsp-ui-sideline-global ((t (:background "gray17"))))
+ '(lsp-ui-sideline-current-symbol ((t (:foreground "white" :box (:line-width (1 . -1) :color "white") :weight ultra-bold :height 0.99))))
+ '(lsp-ui-sideline-global ((t (:background "gray17" :family "Ubuntu Mono"))))
  '(magit-diff-added ((t (:background "#335533" :foreground "black"))))
  '(magit-diff-added-highlight ((t (:background "green" :foreground "black"))))
  '(magit-diff-removed ((t (:background "#553333" :foreground "black"))))
