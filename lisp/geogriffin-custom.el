@@ -115,7 +115,7 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-enable-at-startup t)
  '(package-selected-packages
-   '(use-package magit-libgit lsp-ui magit-popup company-lsp flycheck markdown-mode highlight-symbol magit))
+   '(which-key use-package magit-libgit lsp-ui magit-popup company-lsp flycheck markdown-mode highlight-symbol magit))
  '(proced-auto-update-interval 1)
  '(proced-format-alist
    '((short pid euid tree pri rss majflt state pcpu start time
@@ -251,6 +251,10 @@
  '(use-file-dialog nil)
  '(wdired-allow-to-change-permissions 'advanced)
  '(wdired-use-dired-vertical-movement 'sometimes)
+ '(which-key-idle-delay 1.0)
+ '(which-key-idle-secondary-delay 0.05)
+ '(which-key-mode t)
+ '(which-key-show-early-on-C-h t)
  '(whitespace-style
    '(face trailing empty indentation::space space-before-tab::tab tab-mark))
  '(xterm-mouse-mode t))
