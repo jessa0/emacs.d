@@ -4,6 +4,7 @@
 /.rust-auto-use-cache
 /ac-comphist.dat
 /anaconda-mode/
+/cache/
 /eclipse.jdt.ls/
 /edts/
 /elpa/
@@ -23,3 +24,6 @@
 /workspace/
 /init.el
 /session.*
+/gdb-windows
+/project-list
+/projects
