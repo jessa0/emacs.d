@@ -65,6 +65,7 @@
  '(electric-pair-mode t)
  '(erlang-electric-newline-inhibit nil)
  '(erlang-new-clause-with-arguments t)
+ '(eval-expression-print-level nil)
  '(fill-column 120)
  '(flycheck-check-syntax-automatically
    '(save idle-change idle-buffer-switch new-line mode-enabled))
