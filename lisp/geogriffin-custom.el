@@ -45,6 +45,7 @@
  '(create-lockfiles nil)
  '(custom-enabled-themes '(deeper-blue))
  '(default-frame-alist '((width . 120) (left-fringe) (right-fringe)))
+ '(delete-by-moving-to-trash t)
  '(desktop-lazy-idle-delay 86400)
  '(desktop-lazy-verbose nil)
  '(desktop-load-locked-desktop nil)
