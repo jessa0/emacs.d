@@ -20,6 +20,7 @@
       (buffer-string)
       "
 " t)))
+ '(auth-source-save-behavior nil)
  '(auth-sources '("~/.authinfo.gpg"))
  '(c-basic-offset 2)
  '(column-number-mode t)
