@@ -85,6 +85,9 @@
    "grep --color -nH --null --exclude=*~ --exclude-dir=.git -e ")
  '(grep-find-command
    '("find . -type f -exec grep --color -nH --null --exclude=*~ --exclude-dir=.git -e /dev/null \\{\\} +" . 80))
+ '(gud-tooltip-mode t)
+ '(gud-tooltip-modes
+   '(gud-mode c-mode c++-mode fortran-mode python-mode rust-mode))
  '(highlight-symbol-idle-delay 0.2)
  '(highlight-symbol-occurrence-message nil)
  '(iconify-child-frame 'make-invisible)
