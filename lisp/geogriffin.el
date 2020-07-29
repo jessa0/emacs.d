@@ -113,6 +113,7 @@
   :mode "inventories/.+/hosts\\'")
 
 (put 'narrow-to-region 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
 
 (global-set-key (kbd "C-z")    #'undo)
 (global-set-key (kbd "M-o")    #'other-window)
