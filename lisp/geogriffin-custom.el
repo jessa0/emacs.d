@@ -26,9 +26,9 @@
  '(column-number-mode t)
  '(comment-column 80)
  '(comment-fill-column 160)
- '(company-backends '(company-lsp company-files))
- '(company-begin-commands
-   '(self-insert-command org-self-insert-command orgtbl-self-insert-command c-scope-operator c-electric-colon c-electric-lt-gt c-electric-slash))
+ '(company-backends
+   '(company-capf company-files
+                  (company-gtags company-keywords)))
  '(company-frontends
    '(company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend company-preview-common-frontend))
  '(company-idle-delay 0)
@@ -117,7 +117,7 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-enable-at-startup t)
  '(package-selected-packages
-   '(which-key use-package magit-libgit lsp-ui magit-popup company-lsp flycheck markdown-mode highlight-symbol magit))
+   '(which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
  '(proced-auto-update-interval 1)
  '(proced-format-alist
    '((short pid euid tree pri rss majflt state pcpu start time
