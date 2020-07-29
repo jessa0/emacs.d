@@ -257,6 +257,7 @@
  '(which-key-show-early-on-C-h t)
  '(whitespace-style
    '(face trailing empty indentation::space space-before-tab::tab tab-mark))
+ '(x-stretch-cursor t)
  '(xterm-mouse-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
