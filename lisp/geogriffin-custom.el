@@ -142,7 +142,7 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-enable-at-startup t)
  '(package-selected-packages
-   '(which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
+   '(toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
  '(proced-auto-update-interval 1)
  '(proced-format-alist
    '((short pid euid tree pri rss majflt state pcpu start time
