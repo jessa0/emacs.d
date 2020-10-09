@@ -50,6 +50,10 @@
   :config
   (projectile-mode +1))
 
+(use-package flx-ido
+  :requires ido
+  :config (flx-ido-mode))
+
 (use-package flycheck
   :config
   (flycheck-define-checker erlang-rebar3-dialyzer
