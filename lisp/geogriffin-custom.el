@@ -277,6 +277,8 @@
  '(tool-bar-mode nil)
  '(tramp-auto-save-directory "~/.emacs.d/auto-saves/")
  '(tramp-connection-timeout 10)
+ '(tramp-default-method "ssh")
+ '(tramp-encoding-shell "/bin/bash")
  '(use-dialog-box nil)
  '(use-file-dialog nil)
  '(wdired-allow-to-change-permissions 'advanced)
