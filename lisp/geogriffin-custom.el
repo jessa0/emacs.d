@@ -43,7 +43,7 @@
  '(compilation-context-lines 5)
  '(compilation-scroll-output (quote first-error))
  '(compilation-skip-threshold 2)
- '(compilation-window-height 40)
+ '(compilation-window-height 10)
  '(create-lockfiles nil)
  '(custom-enabled-themes (quote (deeper-blue)))
  '(default-frame-alist (quote ((width . 120) (left-fringe) (right-fringe))))
