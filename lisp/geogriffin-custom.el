@@ -12,7 +12,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
- '(async-shell-command-buffer 'rename-buffer)
+ '(async-shell-command-buffer (quote rename-buffer))
  '(auth-source-gpg-encrypt-to
    (with-temp-buffer
      (insert-file-contents "~/.password-store/.gpg-id")
@@ -21,30 +21,32 @@
       "
 " t)))
  '(auth-source-save-behavior nil)
- '(auth-sources '("~/.authinfo.gpg"))
+ '(auth-sources (quote ("~/.authinfo.gpg")))
  '(c-basic-offset 2)
  '(column-number-mode t)
  '(comment-column 80)
  '(comment-fill-column 160)
  '(company-backends
-   '(company-capf company-files
-                  (company-gtags company-keywords)))
+   (quote
+    (company-capf company-files
+                  (company-gtags company-keywords))))
  '(company-frontends
-   '(company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend company-preview-common-frontend))
+   (quote
+    (company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend company-preview-common-frontend)))
  '(company-idle-delay 0)
- '(company-require-match ''company-explicit-action-p)
+ '(company-require-match (quote (quote company-explicit-action-p)))
  '(company-selection-wrap-around t)
  '(company-show-numbers t)
  '(company-tooltip-idle-delay 0.1)
- '(company-transformers '(company-sort-by-backend-importance))
+ '(company-transformers (quote (company-sort-by-backend-importance)))
  '(compilation-always-kill t)
  '(compilation-context-lines 5)
- '(compilation-scroll-output 'first-error)
+ '(compilation-scroll-output (quote first-error))
  '(compilation-skip-threshold 2)
  '(compilation-window-height 40)
  '(create-lockfiles nil)
- '(custom-enabled-themes '(deeper-blue))
- '(default-frame-alist '((width . 120) (left-fringe) (right-fringe)))
+ '(custom-enabled-themes (quote (deeper-blue)))
+ '(default-frame-alist (quote ((width . 120) (left-fringe) (right-fringe))))
  '(delete-by-moving-to-trash t)
  '(desktop-lazy-idle-delay 86400)
  '(desktop-lazy-verbose nil)
@@ -59,7 +61,7 @@
  '(display-time-format "%m/%d %H:%M")
  '(display-time-mode t)
  '(echo-keystrokes 0.1)
- '(ediff-window-setup-function 'ediff-setup-windows-plain)
+ '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(edts-dialyzer-inhibit-on-compile nil)
  '(eldoc-minor-mode-string nil)
  '(electric-pair-mode t)
@@ -68,16 +70,17 @@
  '(eval-expression-print-level nil)
  '(fill-column 120)
  '(flycheck-check-syntax-automatically
-   '(save idle-change idle-buffer-switch new-line mode-enabled))
+   (quote
+    (save idle-change idle-buffer-switch new-line mode-enabled)))
  '(flycheck-display-errors-delay 0.3)
  '(flycheck-erlang-dialyzer-executable nil)
- '(flycheck-erlang-include-path '("../include"))
- '(flycheck-indication-mode 'right-fringe)
+ '(flycheck-erlang-include-path (quote ("../include")))
+ '(flycheck-indication-mode (quote right-fringe))
  '(flycheck-keymap-prefix "c")
- '(frame-auto-hide-function 'delete-frame)
+ '(frame-auto-hide-function (quote delete-frame))
  '(fringe-mode nil nil (fringe))
  '(gdb-display-io-nopopup t)
- '(gdb-display-source-buffer-action '(nil (inhibit-same-window . t)))
+ '(gdb-display-source-buffer-action (quote (nil (inhibit-same-window . t))))
  '(gdb-restore-window-configuration-after-quit t)
  '(global-flycheck-mode t)
  '(global-semantic-idle-completions-mode nil nil (semantic/idle))
@@ -88,35 +91,38 @@
  '(grep-command
    "grep --color -nH --null --exclude=*~ --exclude-dir=.git -e ")
  '(grep-find-command
-   '("find . -type f -exec grep --color -nH --null --exclude=*~ --exclude-dir=.git -e /dev/null \\{\\} +" . 80))
+   (quote
+    ("find . -type f -exec grep --color -nH --null --exclude=*~ --exclude-dir=.git -e /dev/null \\{\\} +" . 80)))
  '(gud-tooltip-mode t)
  '(gud-tooltip-modes
-   '(gud-mode c-mode c++-mode fortran-mode python-mode rust-mode))
+   (quote
+    (gud-mode c-mode c++-mode fortran-mode python-mode rust-mode)))
  '(highlight-symbol-idle-delay 0.2)
  '(highlight-symbol-occurrence-message nil)
- '(iconify-child-frame 'make-invisible)
+ '(iconify-child-frame (quote make-invisible))
  '(ido-auto-merge-work-directories-length -1)
  '(ido-case-fold t)
  '(ido-enable-dot-prefix t)
  '(ido-enable-flex-matching t)
- '(ido-mode 'both nil (ido))
+ '(ido-mode (quote both) nil (ido))
  '(ido-use-virtual-buffers t)
  '(indent-tabs-mode nil)
- '(indicate-buffer-boundaries 'right)
+ '(indicate-buffer-boundaries (quote right))
  '(indicate-empty-lines t)
  '(inhibit-startup-echo-area-message "geogriffin")
  '(inhibit-startup-screen t)
- '(initial-major-mode 'org-mode)
+ '(initial-major-mode (quote org-mode))
  '(initial-scratch-message nil)
- '(java-mode-hook '(subword-mode))
+ '(java-mode-hook (quote (subword-mode)))
  '(lsp-document-sync-method nil)
  '(lsp-file-watch-ignored
-   '(".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build"))
+   (quote
+    (".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build")))
  '(lsp-headerline-breadcrumb-enable t)
  '(lsp-keep-workspace-alive nil)
  '(lsp-lens-enable t)
  '(lsp-prefer-flymake nil)
- '(lsp-restart 'ignore)
+ '(lsp-restart (quote ignore))
  '(lsp-rust-analyzer-cargo-load-out-dirs-from-check t)
  '(lsp-rust-analyzer-display-chaining-hints t)
  '(lsp-rust-analyzer-display-parameter-hints t)
@@ -126,11 +132,11 @@
  '(lsp-rust-analyzer-server-display-inlay-hints t)
  '(lsp-rust-clippy-preference "on")
  '(lsp-rust-rls-server-command '("/home/geogriffin/bin/rls"))
- '(lsp-rust-server 'rust-analyzer)
+ '(lsp-rust-server (quote rust-analyzer))
  '(lsp-ui-doc-enable nil)
  '(lsp-ui-doc-header t)
  '(lsp-ui-doc-include-signature t)
- '(lsp-ui-doc-position 'at-point)
+ '(lsp-ui-doc-position (quote at-point))
  '(lsp-ui-flycheck-enable t)
  '(lsp-ui-sideline-delay 1.0)
  '(lsp-ui-sideline-ignore-duplicate t)
@@ -138,23 +144,27 @@
  '(lsp-ui-sideline-show-hover t)
  '(menu-bar-mode nil)
  '(package-archives
-   '(("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "https://melpa.org/packages/")))
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "https://melpa.org/packages/"))))
  '(package-enable-at-startup t)
  '(package-selected-packages
-   '(toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
+   (quote
+    (flx-ido projectile company yaml-mode forge toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit)))
  '(proced-auto-update-interval 1)
  '(proced-format-alist
-   '((short pid euid tree pri rss majflt state pcpu start time
+   (quote
+    ((short pid euid tree pri rss majflt state pcpu start time
             (args comm))
      (medium pid euid tree pcpu pmem vsize rss ttname state start time
              (args comm))
      (long user euid group pid tree pri nice pcpu pmem vsize rss ttname state start time
            (args comm))
      (verbose user euid group egid pid ppid tree pgrp sess pri nice pcpu pmem state thcount vsize rss ttname tpgid minflt majflt cminflt cmajflt start time utime stime ctime cutime cstime etime
-              (args comm))))
+              (args comm)))))
  '(proced-grammar-alist
-   '((euid "EUID" "%d" right proced-< nil
+   (quote
+    ((euid "EUID" "%d" right proced-< nil
            (euid pid)
            (nil t nil))
      (user "User" nil left proced-string-lessp nil
@@ -256,7 +266,7 @@
              (ppid)
              (proced-filter-children proced-process-alist ppid))
            "refine to process children"))
-     (tree "Tree" proced-format-tree left nil nil nil nil)))
+     (tree "Tree" proced-format-tree left nil nil nil nil))))
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(rust-always-locate-project-on-open t)
@@ -265,7 +275,8 @@
  '(savehist-mode t)
  '(scroll-bar-mode nil)
  '(semantic-default-submodes
-   '(global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-stickyfunc-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode global-semantic-idle-local-symbol-highlight-mode global-semantic-highlight-edits-mode))
+   (quote
+    (global-semantic-highlight-func-mode global-semantic-decoration-mode global-semantic-stickyfunc-mode global-semanticdb-minor-mode global-semantic-idle-summary-mode global-semantic-mru-bookmark-mode global-semantic-idle-local-symbol-highlight-mode global-semantic-highlight-edits-mode)))
  '(semantic-idle-scheduler-idle-time 0.1)
  '(semantic-mode nil)
  '(sentence-end-double-space nil)
@@ -281,14 +292,15 @@
  '(tramp-encoding-shell "/bin/bash")
  '(use-dialog-box nil)
  '(use-file-dialog nil)
- '(wdired-allow-to-change-permissions 'advanced)
- '(wdired-use-dired-vertical-movement 'sometimes)
+ '(wdired-allow-to-change-permissions (quote advanced))
+ '(wdired-use-dired-vertical-movement (quote sometimes))
  '(which-key-idle-delay 1.0)
  '(which-key-idle-secondary-delay 0.05)
  '(which-key-mode t)
  '(which-key-show-early-on-C-h t)
  '(whitespace-style
-   '(face trailing empty indentation::space space-before-tab::tab tab-mark))
+   (quote
+    (face trailing empty indentation::space space-before-tab::tab tab-mark)))
  '(x-stretch-cursor t)
  '(xterm-mouse-mode t))
 (custom-set-faces
