@@ -266,6 +266,8 @@
              (proced-filter-children proced-process-alist ppid))
            "refine to process children"))
      (tree "Tree" proced-format-tree left nil nil nil nil))))
+ '(projectile-project-search-path (quote ("~/work" "~/checkouts")))
+ '(projectile-sort-order (quote recently-active))
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(rust-always-locate-project-on-open t)
