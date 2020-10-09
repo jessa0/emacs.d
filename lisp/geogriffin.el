@@ -37,8 +37,8 @@
   :hook ((c-mode rust-mode erlang-mode) . lsp-deferred)
   :bind (:map lsp-mode-map
               (("M-RET"                       . #'lsp-execute-code-action)
-               ("s-l g u"                     . #'lsp-rust-find-parent-module)
-               ("s-l ^"                       . #'lsp-rust-analyzer-join-lines)
+               ("C-c l g u"                   . #'lsp-rust-find-parent-module)
+               ("C-c l ^"                     . #'lsp-rust-analyzer-join-lines)
                ([remap xref-find-definitions] . #'lsp-ui-peek-find-definitions)
                ([remap xref-find-references]  . #'lsp-ui-peek-find-references)
                ([remap highlight-symbol-prev] . #'lsp-ui-peek-jump-backward)

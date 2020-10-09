@@ -120,6 +120,7 @@
     (".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build")))
  '(lsp-headerline-breadcrumb-enable t)
  '(lsp-keep-workspace-alive nil)
+ '(lsp-keymap-prefix "C-c l")
  '(lsp-lens-enable t)
  '(lsp-prefer-flymake nil)
  '(lsp-restart (quote ignore))
