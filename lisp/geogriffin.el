@@ -54,6 +54,10 @@
   :requires ido
   :config (flx-ido-mode))
 
+(use-package which-key
+  :config
+  (which-key-mode))
+
 (use-package flycheck
   :config
   (flycheck-define-checker erlang-rebar3-dialyzer
