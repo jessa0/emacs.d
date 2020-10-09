@@ -44,6 +44,12 @@
                ([remap highlight-symbol-prev] . #'lsp-ui-peek-jump-backward)
                ([remap highlight-symbol-next] . #'lsp-ui-peek-jump-forward))))
 
+(use-package projectile
+  :bind (:map projectile-mode-map
+              (("C-c p" . #'projectile-command-map)))
+  :config
+  (projectile-mode +1))
+
 (use-package flycheck
   :config
   (flycheck-define-checker erlang-rebar3-dialyzer
