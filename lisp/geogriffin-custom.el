@@ -266,6 +266,9 @@
              (proced-filter-children proced-process-alist ppid))
            "refine to process children"))
      (tree "Tree" proced-format-tree left nil nil nil nil))))
+ '(projectile-globally-ignored-directories
+   (quote
+    (".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd" "target")))
  '(projectile-project-search-path (quote ("~/work" "~/checkouts")))
  '(projectile-sort-order (quote recently-active))
  '(recentf-max-saved-items 100)
