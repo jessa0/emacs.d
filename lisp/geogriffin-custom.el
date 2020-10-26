@@ -12,7 +12,8 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
- '(async-shell-command-buffer (quote rename-buffer))
+ '(async-shell-command-buffer (quote new-buffer))
+ '(async-shell-command-display-buffer nil)
  '(auth-source-gpg-encrypt-to
    (with-temp-buffer
      (insert-file-contents "~/.password-store/.gpg-id")
@@ -149,7 +150,7 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (flx-ido projectile company yaml-mode forge toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit)))
+    (bash-completion company yaml-mode forge projectile flx-ido toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit)))
  '(proced-auto-update-interval 1)
  '(proced-format-alist
    (quote
@@ -284,7 +285,11 @@
  '(semantic-idle-scheduler-idle-time 0.1)
  '(semantic-mode nil)
  '(sentence-end-double-space nil)
+ '(shell-command-dont-erase-buffer (quote beg-last-out))
  '(shell-completion-execonly nil)
+ '(shell-dynamic-complete-functions
+   (quote
+    (bash-completion-dynamic-complete comint-c-a-p-replace-by-expanded-history shell-environment-variable-completion shell-command-completion shell-c-a-p-replace-by-expanded-directory pcomplete-completions-at-point shell-filename-completion comint-filename-completion)))
  '(shift-select-mode nil)
  '(show-paren-delay 0)
  '(show-paren-mode t)
