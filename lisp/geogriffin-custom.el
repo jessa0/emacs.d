@@ -316,6 +316,8 @@
  '(magit-diff-added-highlight ((t (:background "green" :foreground "black"))))
  '(magit-diff-removed ((t (:background "#553333" :foreground "black"))))
  '(magit-diff-removed-highlight ((t (:background "#663333" :foreground "black"))))
+ '(mode-line ((t (:background "DeepPink3" :foreground "black" :box (:line-width 1 :style released-button)))))
+ '(mode-line-inactive ((t (:background "DeepPink4" :foreground "black"))))
  '(tab-bar ((t (:inherit variable-pitch :box nil :height 85))))
  '(tab-bar-tab ((t (:inherit tab-bar :box (:line-width 1 :style released-button)))))
  '(tab-bar-tab-inactive ((t (:inherit tab-bar-tab :box nil))))
