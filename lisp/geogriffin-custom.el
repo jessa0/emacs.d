@@ -54,7 +54,12 @@
  '(desktop-restore-in-current-display nil)
  '(desktop-save t)
  '(desktop-save-mode t)
+ '(dired-dwim-target 'dired-dwim-target-next)
  '(dired-listing-switches "-lh")
+ '(dired-sidebar-should-follow-file t)
+ '(dired-sidebar-subtree-line-prefix "__")
+ '(dired-sidebar-theme 'vscode)
+ '(dired-sidebar-width 20)
  '(display-time-24hr-format t)
  '(display-time-day-and-date t)
  '(display-time-format "%m/%d %H:%M")
@@ -142,7 +147,7 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-enable-at-startup t)
  '(package-selected-packages
-   '(persp-projectile bash-completion company yaml-mode forge projectile flx-ido toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
+   '(vscode-icon dired-narrow dired-ranger dired-sidebar dired-subtree persp-projectile bash-completion company yaml-mode forge projectile flx-ido toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
  '(proced-auto-update-interval 1)
  '(proced-format-alist
    '((short pid euid tree pri rss majflt state pcpu start time

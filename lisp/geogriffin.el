@@ -130,6 +130,33 @@
     (lambda () (fci-mode 1)))
   (global-fci-mode))
 
+;;; dired
+
+(use-package dired-sidebar
+  :commands (dired-sidebar-toggle-sidebar)
+  :bind ("C-x D" . dired-sidebar-toggle-sidebar)
+  :init
+  (add-hook 'dired-sidebar-mode-hook
+            (lambda ()
+              (unless (file-remote-p default-directory)
+                (auto-revert-mode)))))
+
+(use-package dired-narrow
+  :bind (:map dired-mode-map
+              ("/" . dired-narrow)))
+
+(use-package dired-ranger
+  :bind (:map dired-mode-map
+              ("C-c c" . dired-ranger-copy)
+              ("C-c x" . dired-ranger-move)
+              ("C-c v" . dired-ranger-paste)))
+
+(use-package dired-subtree
+  :config
+  (bind-keys :map dired-mode-map
+             ("i" . dired-subtree-insert)
+             (";" . dired-subtree-remove)))
+
 ;;; misc
 
 (use-package hcl-mode
