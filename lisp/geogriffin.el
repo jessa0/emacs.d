@@ -7,12 +7,16 @@
 
 (require 'use-package)
 
+;;; magit
+
 (use-package magit
   :bind (("C-x g" . #'magit-status)
          ("C-x G" . #'magit-file-popup)))
 
 (use-package forge
   :after (magit))
+
+;;; programming
 
 (use-package eldoc-mode
   :hook (racer-mode))
@@ -44,6 +48,8 @@
                ([remap highlight-symbol-prev] . #'lsp-ui-peek-jump-backward)
                ([remap highlight-symbol-next] . #'lsp-ui-peek-jump-forward))))
 
+;;; projectile
+
 (use-package projectile
   :bind (:map projectile-mode-map
               (("C-c p" . #'projectile-command-map)))
@@ -54,13 +60,7 @@
   :config
   (persp-mode))
 
-(use-package flx-ido
-  :requires ido
-  :config (flx-ido-mode))
-
-(use-package which-key
-  :config
-  (which-key-mode))
+;;; flycheck
 
 (use-package flycheck
   :config
@@ -96,6 +96,12 @@
     (flycheck-list-errors)
     (flycheck-buffer)))
 
+(use-package flycheck-inline
+  :config
+  (global-flycheck-inline-mode))
+
+;;; edts
+
 (use-package edts-mode
   :config
   (defun my-edts-mode-hook ()
@@ -104,7 +110,9 @@
     (push 'erlang flycheck-disabled-checkers))
   (add-hook 'edts-mode-hook 'my-edts-mode-hook))
 
-;(use-package zone :config (zone-when-idle 600))
+;; (use-package zone :config (zone-when-idle 600))
+
+;;; compilation
 
 (defun my-compile (command)
   (interactive (list (compilation-read-command (eval compile-command))))
@@ -114,15 +122,15 @@
   (interactive)
   (my-compile (eval compile-command)))
 
+;;; fill column indicator
+
 (use-package fill-column-indicator
   :config
   (define-globalized-minor-mode global-fci-mode fci-mode
     (lambda () (fci-mode 1)))
   (global-fci-mode))
 
-(use-package flycheck-inline
-  :config
-  (global-flycheck-inline-mode))
+;;; misc
 
 (use-package hcl-mode
   :mode "\\.tf\\'")
@@ -130,8 +138,20 @@
 (use-package conf-unix-mode
   :mode "inventories/.+/hosts\\'")
 
+(use-package flx-ido
+  :requires ido
+  :config (flx-ido-mode))
+
+(use-package which-key
+  :config
+  (which-key-mode))
+
+;;; "advanced" features
+
 (put 'narrow-to-region 'disabled nil)
 (put 'dired-find-alternate-file 'disabled nil)
+
+;; global key bindings
 
 (global-set-key (kbd "C-z")    #'undo)
 (global-set-key (kbd "M-o")    #'other-window)
@@ -152,8 +172,10 @@
 
 (global-set-key (kbd "<mouse-8>") #'xref-pop-marker-stack)
 (global-set-key (kbd "<mouse-9>") #'xref-find-definitions)
-;(global-set-key (kbd "<mouse-4>") #'scroll-up-line)
-;(global-set-key (kbd "<mouse-5>") #'scroll-down-line)
+;; (global-set-key (kbd "<mouse-4>") #'scroll-up-line)
+;; (global-set-key (kbd "<mouse-5>") #'scroll-down-line)
+
+;;; misc variables
 
 (setenv "EDITOR" "emacsclient -c")
 
