@@ -50,6 +50,10 @@
   :config
   (projectile-mode +1))
 
+(use-package perspective
+  :config
+  (persp-mode))
+
 (use-package flx-ido
   :requires ido
   :config (flx-ido-mode))
