@@ -60,6 +60,11 @@
   :config
   (persp-mode))
 
+(use-package persp-projectile
+  :bind (:map projectile-mode-map
+              ("C-c p p" . projectile-persp-switch-project)
+              ("C-c p k" . persp-kill)))
+
 ;;; flycheck
 
 (use-package flycheck

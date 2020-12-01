@@ -266,6 +266,7 @@
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd" "target"))
  '(projectile-project-search-path '("~/work" "~/checkouts"))
  '(projectile-sort-order 'recently-active)
+ '(projectile-switch-project-action 'projectile-vc)
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(rust-always-locate-project-on-open t)
