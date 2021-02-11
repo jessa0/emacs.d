@@ -56,14 +56,15 @@
   :config
   (projectile-mode +1))
 
-(use-package perspective
-  :config
-  (persp-mode))
+;(use-package persp
+;  :config
+;  (persp-mode)
+;  (add-hook 'kill-emacs-hook #'persp-state-save))
 
-(use-package persp-projectile
-  :bind (:map projectile-mode-map
-              ("C-c p p" . projectile-persp-switch-project)
-              ("C-c p k" . persp-kill)))
+;(use-package persp-projectile
+;  :bind (:map projectile-mode-map
+;              ("C-c p p" . projectile-persp-switch-project)
+;              ("C-c p k" . persp-kill)))
 
 ;;; flycheck
 
