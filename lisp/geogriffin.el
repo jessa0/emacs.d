@@ -179,6 +179,10 @@
   :config
   (which-key-mode))
 
+(use-package undohist
+  :config
+  (undohist-initialize))
+
 (use-package persistent-scratch
   :config
   (persistent-scratch-setup-default))
