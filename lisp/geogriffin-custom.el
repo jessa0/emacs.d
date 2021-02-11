@@ -23,6 +23,7 @@
 " t)))
  '(auth-source-save-behavior nil)
  '(auth-sources '("~/.authinfo.gpg"))
+ '(bookmark-save-flag 1)
  '(c-basic-offset 2)
  '(column-number-mode t)
  '(comment-column 80)
