@@ -83,6 +83,7 @@
  '(flycheck-keymap-prefix "c")
  '(frame-auto-hide-function 'delete-frame)
  '(fringe-mode nil nil (fringe))
+ '(gc-cons-threshold 100000000)
  '(gdb-display-io-nopopup t)
  '(gdb-display-source-buffer-action '(nil (inhibit-same-window . t)))
  '(gdb-restore-window-configuration-after-quit t)
@@ -145,6 +146,7 @@
  '(lsp-ui-sideline-ignore-duplicate t)
  '(lsp-ui-sideline-show-diagnostics nil)
  '(lsp-ui-sideline-show-hover t)
+ '(lsp-ui-sideline-update-mode 'line)
  '(menu-bar-mode nil)
  '(mouse-wheel-tilt-scroll t)
  '(package-archives

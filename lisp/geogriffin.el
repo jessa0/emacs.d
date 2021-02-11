@@ -231,6 +231,9 @@
 
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 
+;; Improve LSP performance per their recommendation
+(setq read-process-output-max (* 1024 1024))
+
 ;; Improve performance of very long lines
 (setq-default bidi-display-reordering 'left-to-right)
 
