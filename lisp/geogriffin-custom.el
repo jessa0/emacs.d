@@ -116,6 +116,7 @@
  '(initial-major-mode 'org-mode)
  '(initial-scratch-message nil)
  '(java-mode-hook '(subword-mode))
+ '(kill-emacs-query-functions '(geogriffin-kill-emacs-query-function))
  '(lsp-document-sync-method nil)
  '(lsp-file-watch-ignored
    '(".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build"))

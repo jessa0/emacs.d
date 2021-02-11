@@ -217,6 +217,12 @@
 ;; (global-set-key (kbd "<mouse-4>") #'scroll-up-line)
 ;; (global-set-key (kbd "<mouse-5>") #'scroll-down-line)
 
+;;; hooks
+
+(defun geogriffin-kill-emacs-query-function ()
+  "Inhibit killing Emacs implicitly if running as a server."
+  (not (server-running-p)))
+
 ;;; misc variables
 
 (setenv "EDITOR" "emacsclient -c")
