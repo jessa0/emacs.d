@@ -38,7 +38,7 @@
 
 (use-package lsp-mode
   :commands lsp-deferred
-  :hook ((c-mode rust-mode erlang-mode python-mode) . lsp-deferred)
+  :hook ((c-mode rust-mode erlang-mode python-mode typescript-mode) . lsp-deferred)
   :bind (:map lsp-mode-map
               (("M-RET"                       . #'lsp-execute-code-action)
                ("C-c l g u"                   . #'lsp-rust-find-parent-module)
