@@ -191,6 +191,7 @@
 
 (put 'narrow-to-region 'disabled nil)
 (put 'dired-find-alternate-file 'disabled nil)
+(put 'scroll-left 'disabled nil)
 
 ;; global key bindings
 

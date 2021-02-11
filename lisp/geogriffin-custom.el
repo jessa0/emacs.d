@@ -143,6 +143,7 @@
  '(lsp-ui-sideline-show-diagnostics nil)
  '(lsp-ui-sideline-show-hover t)
  '(menu-bar-mode nil)
+ '(mouse-wheel-tilt-scroll t)
  '(package-archives
    '(("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")))
@@ -309,6 +310,8 @@
  '(tramp-encoding-shell "/bin/bash")
  '(use-dialog-box nil)
  '(use-file-dialog nil)
+ '(view-read-only t)
+ '(view-try-extend-at-buffer-end t)
  '(wdired-allow-to-change-permissions 'advanced)
  '(wdired-use-dired-vertical-movement 'sometimes)
  '(which-key-idle-delay 1.0)
