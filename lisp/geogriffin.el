@@ -178,6 +178,10 @@
   :config
   (which-key-mode))
 
+(use-package persistent-scratch
+  :config
+  (persistent-scratch-setup-default))
+
 ;;; "advanced" features
 
 (put 'narrow-to-region 'disabled nil)
