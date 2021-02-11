@@ -276,6 +276,7 @@
  '(projectile-project-search-path '("~/work" "~/checkouts"))
  '(projectile-sort-order 'recently-active)
  '(projectile-switch-project-action 'projectile-vc)
+ '(read-quoted-char-radix 10)
  '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(rust-always-locate-project-on-open t)
