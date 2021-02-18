@@ -122,6 +122,7 @@
  '(lsp-file-watch-ignored
    '(".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build"))
  '(lsp-headerline-breadcrumb-enable t)
+ '(lsp-java-java-path "/usr/lib/jvm/java-11-openjdk-amd64/bin/java")
  '(lsp-keep-workspace-alive nil)
  '(lsp-keymap-prefix "C-c l")
  '(lsp-lens-enable t)
@@ -154,7 +155,7 @@
      ("melpa" . "https://melpa.org/packages/")))
  '(package-enable-at-startup t)
  '(package-selected-packages
-   '(persistent-scratch undohist undo-propose lua-mode typescript-mode vscode-icon dired-narrow dired-ranger dired-sidebar dired-subtree bash-completion company yaml-mode forge projectile flx-ido toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
+   '(lsp-java persistent-scratch undohist undo-propose lua-mode typescript-mode vscode-icon dired-narrow dired-ranger dired-sidebar dired-subtree bash-completion company yaml-mode forge projectile flx-ido toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
  '(persistent-scratch-autosave-interval 30)
  '(persistent-scratch-autosave-mode t)
  '(persistent-scratch-backup-directory nil)
