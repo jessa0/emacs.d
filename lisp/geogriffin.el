@@ -223,6 +223,12 @@
   "Inhibit killing Emacs implicitly if running as a server."
   (not (server-running-p)))
 
+(defun geogriffin-view-mode-hook ()
+  "Custom hook for geogriffin for `view-mode`."
+  (hl-line-mode))
+
+(add-hook 'view-mode-hook #'geogriffin-view-mode-hook)
+
 ;;; misc variables
 
 (setenv "EDITOR" "emacsclient -c")
