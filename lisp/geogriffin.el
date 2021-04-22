@@ -187,6 +187,12 @@
   :config
   (persistent-scratch-setup-default))
 
+(use-package edit-server
+  :commands edit-server-start
+  :init (if after-init-time
+            (edit-server-start)
+          (add-hook 'after-init-hook #'(lambda() (edit-server-start)))))
+
 ;;; "advanced" features
 
 (put 'narrow-to-region 'disabled nil)
