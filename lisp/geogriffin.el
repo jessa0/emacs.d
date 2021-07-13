@@ -231,6 +231,13 @@
 
 (add-hook 'view-mode-hook #'geogriffin-view-mode-hook)
 
+;;; function definitons
+
+(defun geogriffin-append-to-path (dir)
+  "Append DIR to PATH and `exec-path`."
+  (setenv "PATH" (concat (getenv "PATH") ":" dir))
+  (setq exec-path (append exec-path (list dir))))
+
 ;;; misc variables
 
 (setenv "EDITOR" "emacsclient -c")
