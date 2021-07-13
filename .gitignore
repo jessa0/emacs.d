@@ -1,4 +1,7 @@
 *~
+.DS_Store
+*.elc
+
 /.emacs.desktop*
 /.lsp-session-v1
 /.rust-auto-use-cache
