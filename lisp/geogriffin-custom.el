@@ -123,6 +123,7 @@
    '(".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build"))
  '(lsp-file-watch-ignored-directories
    '(".idea" ".ensime_cache" ".eunit" "node_modules" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".bloop" ".metals" "target" "build"))
+ '(lsp-file-watch-threshold 5000)
  '(lsp-headerline-breadcrumb-enable t)
  '(lsp-java-java-path "/usr/lib/jvm/java-11-openjdk-amd64/bin/java")
  '(lsp-keep-workspace-alive nil)
