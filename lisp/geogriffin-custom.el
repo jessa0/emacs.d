@@ -131,6 +131,7 @@
  '(lsp-prefer-flymake nil)
  '(lsp-restart 'ignore)
  '(lsp-rust-analyzer-cargo-load-out-dirs-from-check t)
+ '(lsp-rust-analyzer-cargo-run-build-scripts t)
  '(lsp-rust-analyzer-display-chaining-hints t)
  '(lsp-rust-analyzer-display-parameter-hints t)
  '(lsp-rust-analyzer-download-url
