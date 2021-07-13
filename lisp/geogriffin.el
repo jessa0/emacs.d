@@ -109,6 +109,7 @@
 ;;; edts
 
 (use-package edts-mode
+  :defer
   :config
   (defun my-edts-mode-hook ()
     (push 'erlang-rebar3-dialyzer flycheck-disabled-checkers)
@@ -131,6 +132,7 @@
 ;;; fill column indicator
 
 (use-package fill-column-indicator
+  :defer
   :config
   (define-globalized-minor-mode global-fci-mode fci-mode
     (lambda () (fci-mode 1)))
@@ -186,12 +188,6 @@
 (use-package persistent-scratch
   :config
   (persistent-scratch-setup-default))
-
-(use-package edit-server
-  :commands edit-server-start
-  :init (if after-init-time
-            (edit-server-start)
-          (add-hook 'after-init-hook #'(lambda() (edit-server-start)))))
 
 ;;; "advanced" features
 
