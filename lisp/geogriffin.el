@@ -43,10 +43,9 @@
               (("M-RET"                       . #'lsp-execute-code-action)
                ("C-c l g u"                   . #'lsp-rust-find-parent-module)
                ("C-c l ^"                     . #'lsp-rust-analyzer-join-lines)
-               ([remap xref-find-definitions] . #'lsp-ui-peek-find-definitions)
-               ([remap xref-find-references]  . #'lsp-ui-peek-find-references)
-               ([remap highlight-symbol-prev] . #'lsp-ui-peek-jump-backward)
-               ([remap highlight-symbol-next] . #'lsp-ui-peek-jump-forward))))
+               ("C-c l T i"                   . #'lsp-rust-analyzer-inlay-hints-mode)
+               ([remap xref-find-definitions] . #'lsp-find-definition)
+               ([remap xref-find-references]  . #'lsp-find-references))))
 
 ;;; projectile
 
