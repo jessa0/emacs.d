@@ -54,7 +54,9 @@
   :bind (:map projectile-mode-map
               (("C-c p" . #'projectile-command-map)))
   :config
-  (projectile-mode +1))
+  (projectile-mode +1)
+  (setq compilation-buffer-name-function   #'projectile-compilation-buffer-name)
+  (setq compilation-save-buffers-predicate #'projectile-current-project-buffer-p))
 
 ;(use-package persp
 ;  :config
