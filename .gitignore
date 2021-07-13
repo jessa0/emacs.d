@@ -34,5 +34,6 @@
 /undohist/
 /.log/
 /.cache/
+/.dap-breakpoints
 /undohist/
 /url/
