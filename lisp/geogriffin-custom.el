@@ -282,6 +282,8 @@
              (proced-filter-children proced-process-alist ppid))
            "refine to process children"))
      (tree "Tree" proced-format-tree left nil nil nil nil)))
+ '(projectile-enable-caching t)
+ '(projectile-enable-idle-timer t)
  '(projectile-globally-ignored-directories
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd" "target"))
  '(projectile-project-search-path '("~/work" "~/checkouts"))

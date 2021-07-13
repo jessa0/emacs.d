@@ -26,6 +26,7 @@
 /session.*
 /gdb-windows
 /project-list
+/projectile.cache
 /projects
 /bookmarks
 /persp-confs/
