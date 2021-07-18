@@ -16,27 +16,42 @@
 (use-package forge
   :after (magit))
 
+;;; delight
+
+(use-package delight)
+
+(use-package autorevert
+  :delight auto-revert-mode)
+
+(use-package whitespace
+  :delight global-whitespace-mode)
+
 ;;; programming
 
 (use-package eldoc-mode
   :hook (racer-mode))
 
 (use-package company
+  :delight
   :hook ((lsp-mode racer-mode) . company-mode)
   :init
   (setq company-tooltip-align-annotations t)
   :config
   (when (require 'rust-mode nil t) (bind-key [remap indent-for-tab-command] #'company-indent-or-complete-common rust-mode-map)))
 
-(use-package subword-mode
+(use-package subword
+  :delight
   :bind ("C-c C-w" . subword-mode)
-  :hook (rust-mode protobuf-mode erlang-mode))
+  :hook ((rust-mode protobuf-mode erlang-mode) . subword-mode))
 
-(use-package cargo-minor-mode
-  :mode "Cargo\\.toml\\'"
-  :hook (rust-mode))
+(use-package cargo
+  :defer
+  :delight (cargo-minor-mode)
+  :mode ("Cargo\\.toml\\'" . cargo-minor-mode)
+  :hook (rust-mode . cargo-minor-mode))
 
 (use-package lsp-mode
+  :delight
   :commands lsp-deferred
   :hook ((c-mode rust-mode erlang-mode python-mode typescript-mode) . lsp-deferred)
   :bind (:map lsp-mode-map
@@ -51,6 +66,7 @@
 ;;; projectile
 
 (use-package projectile
+  :delight '(:eval (concat " " (projectile-project-name)))
   :bind (:map projectile-mode-map
               (("C-c p" . #'projectile-command-map)))
   :config
@@ -180,6 +196,7 @@
   :config (flx-ido-mode))
 
 (use-package which-key
+  :delight
   :config
   (which-key-mode))
 
