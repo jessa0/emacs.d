@@ -224,7 +224,8 @@
 
 (defun geogriffin-kill-emacs-query-function ()
   "Inhibit killing Emacs implicitly if running as a server."
-  (not (server-running-p)))
+  (or (not (server-running-p))
+      (eq (window-system) 'ns)))
 
 (defun geogriffin-view-mode-hook ()
   "Custom hook for geogriffin for `view-mode`."
