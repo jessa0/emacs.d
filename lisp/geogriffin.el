@@ -45,7 +45,8 @@
                ("C-c l ^"                     . #'lsp-rust-analyzer-join-lines)
                ("C-c l T i"                   . #'lsp-rust-analyzer-inlay-hints-mode)
                ([remap xref-find-definitions] . #'lsp-find-definition)
-               ([remap xref-find-references]  . #'lsp-find-references))))
+               ([remap xref-find-references]  . #'lsp-find-references)))
+  :config (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
 
 ;;; projectile
 
