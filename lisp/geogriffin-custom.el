@@ -153,6 +153,9 @@
  '(lsp-ui-sideline-update-mode 'line)
  '(menu-bar-mode nil)
  '(mouse-wheel-tilt-scroll t)
+ '(ns-alternate-modifier 'super)
+ '(ns-command-modifier 'meta)
+ '(ns-right-alternate-modifier 'meta)
  '(package-archives
    '(("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")))
