@@ -34,9 +34,11 @@
  '(company-frontends
    '(company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend company-preview-common-frontend))
  '(company-idle-delay 0)
+ '(company-minimum-prefix-length 1)
  '(company-require-match ''company-explicit-action-p)
  '(company-selection-wrap-around t)
  '(company-show-numbers t)
+ '(company-show-quick-access t)
  '(company-tooltip-idle-delay 0.1)
  '(company-transformers '(company-sort-by-backend-importance))
  '(compilation-always-kill t)
