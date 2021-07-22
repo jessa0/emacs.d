@@ -224,6 +224,7 @@
 (global-set-key (kbd "M-3")    #'split-window-horizontally)
 (global-set-key (kbd "C-c $")  #'toggle-truncate-lines)
 (global-set-key (kbd "C-|")    #'align-regexp)
+(global-set-key (kbd "C-:")    #'geogriffin-align-colon)
 (global-set-key (kbd "M-[")    #'highlight-symbol-prev)
 (global-set-key (kbd "M-]")    #'highlight-symbol-next)
 (global-set-key (kbd "M-{")    #'highlight-symbol-prev-in-defun)
@@ -257,6 +258,11 @@
   "Append DIR to PATH and `exec-path`."
   (setenv "PATH" (concat (getenv "PATH") ":" dir))
   (setq exec-path (append exec-path (list dir))))
+
+(defun geogriffin-align-colon (beg end)
+  "Align the current region of colon-separated key-value lines. BEG and END mark the limits of the region."
+  (interactive (list (region-beginning) (region-end)))
+  (align-regexp beg end "\\(:\\s-*\\) "))
 
 ;;; misc variables
 
