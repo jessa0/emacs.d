@@ -141,7 +141,6 @@
    "https://github.com/rust-analyzer/rust-analyzer/releases/download/nightly/rust-analyzer-linux")
  '(lsp-rust-analyzer-max-inlay-hint-length 20)
  '(lsp-rust-analyzer-proc-macro-enable t)
- '(lsp-rust-analyzer-server-display-inlay-hints t)
  '(lsp-rust-clippy-preference "on")
  '(lsp-rust-server 'rust-analyzer)
  '(lsp-ui-doc-enable nil)
