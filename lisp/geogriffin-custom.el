@@ -28,6 +28,7 @@
  '(column-number-mode t)
  '(comment-column 80)
  '(comment-fill-column 160)
+ '(comment-multi-line t)
  '(company-backends
    '(company-capf company-files
                   (company-gtags company-keywords)))
