@@ -14,13 +14,6 @@
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(async-shell-command-buffer 'new-buffer)
  '(async-shell-command-display-buffer nil)
- '(auth-source-gpg-encrypt-to
-   (with-temp-buffer
-     (insert-file-contents "~/.password-store/.gpg-id")
-     (split-string
-      (buffer-string)
-      "
-" t)))
  '(auth-source-save-behavior nil)
  '(auth-sources '(macos-keychain-internet macos-keychain-generic "~/.authinfo.gpg"))
  '(bookmark-save-flag 1)
