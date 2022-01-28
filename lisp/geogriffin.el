@@ -279,6 +279,11 @@
   (setenv "PATH" (concat (getenv "PATH") ":" dir))
   (setq exec-path (append exec-path (list dir))))
 
+(defun geogriffin-prepend-to-path (dir)
+  "Append DIR to PATH and `exec-path`."
+  (setenv "PATH" (concat dir ":" (getenv "PATH")))
+  (setq exec-path (cons dir exec-path)))
+
 (defun geogriffin-align-colon (beg end)
   "Align the current region of colon-separated key-value lines. BEG and END mark the limits of the region."
   (interactive (list (region-beginning) (region-end)))
