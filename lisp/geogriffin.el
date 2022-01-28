@@ -59,6 +59,7 @@
                ("C-c l g u"                   . #'lsp-rust-find-parent-module)
                ("C-c l ^"                     . #'lsp-rust-analyzer-join-lines)
                ("C-c l T i"                   . #'lsp-rust-analyzer-inlay-hints-mode)
+               ("C-c l G c"                   . #'lsp-rust-analyzer-open-cargo-toml)
                ([remap xref-find-definitions] . #'lsp-find-definition)
                ([remap xref-find-references]  . #'lsp-find-references)))
   :config (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
