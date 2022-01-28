@@ -53,7 +53,7 @@
 (use-package lsp-mode
   :delight
   :commands lsp-deferred
-  :hook ((c-mode rust-mode erlang-mode python-mode typescript-mode) . lsp-deferred)
+  :hook ((c-mode rust-mode erlang-mode python-mode swift-mode typescript-mode) . lsp-deferred)
   :bind (:map lsp-mode-map
               (("M-RET"                       . #'lsp-execute-code-action)
                ("C-c l g u"                   . #'lsp-rust-find-parent-module)
