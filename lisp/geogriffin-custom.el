@@ -22,7 +22,7 @@
       "
 " t)))
  '(auth-source-save-behavior nil)
- '(auth-sources '("~/.authinfo.gpg"))
+ '(auth-sources '(macos-keychain-internet macos-keychain-generic "~/.authinfo.gpg"))
  '(bookmark-save-flag 1)
  '(c-basic-offset 2)
  '(column-number-mode t)
