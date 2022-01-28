@@ -167,6 +167,7 @@
    '(("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")))
  '(package-enable-at-startup t)
+ '(package-native-compile t)
  '(package-selected-packages
    '(delight treemacs-magit treemacs-projectile iedit ido-completing-read+ ripgrep lsp-java persistent-scratch undohist undo-propose lua-mode typescript-mode vscode-icon dired-narrow dired-ranger dired-sidebar dired-subtree bash-completion company yaml-mode forge projectile flx-ido toml-mode erlang flycheck-inline cargo rust-mode rust-playground which-key use-package magit-libgit lsp-ui magit-popup flycheck markdown-mode highlight-symbol magit))
  '(persistent-scratch-autosave-interval 30)
