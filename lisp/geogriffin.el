@@ -80,6 +80,9 @@
                      :server-id 'rust-analyzer-remote
                      :custom-capabilities `((experimental . ((snippetTextEdit . ,(and lsp-enable-snippet (featurep 'yasnippet)))))))))
 
+(use-package yasnippet
+  :hook (lsp-mode . yas-minor-mode))
+
 ;;; projectile
 
 (use-package projectile
