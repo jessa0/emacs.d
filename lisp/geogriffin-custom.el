@@ -330,6 +330,8 @@
  '(tramp-connection-timeout 10)
  '(tramp-default-method "ssh")
  '(tramp-encoding-shell "/bin/bash")
+ '(tramp-remote-path
+   '(tramp-own-remote-path tramp-default-remote-path "/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin" "/local/bin" "/local/freeware/bin" "/local/gnu/bin" "/usr/freeware/bin" "/usr/pkg/bin" "/usr/contrib/bin" "/opt/bin" "/opt/sbin" "/opt/local/bin"))
  '(use-dialog-box nil)
  '(use-file-dialog nil)
  '(view-read-only t)
