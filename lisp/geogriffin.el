@@ -62,7 +62,23 @@
                ("C-c l G c"                   . #'lsp-rust-analyzer-open-cargo-toml)
                ([remap xref-find-definitions] . #'lsp-find-definition)
                ([remap xref-find-references]  . #'lsp-find-references)))
-  :config (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
+  :config
+  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
+  (lsp-register-client
+    (make-lsp-client :new-connection (lsp-tramp-connection "rust-analyzer")
+                     :major-modes '(rust-mode rustic-mode)
+                     :remote? t
+                     :initialization-options 'lsp-rust-analyzer--make-init-options
+                     :action-handlers (ht ("rust-analyzer.runSingle" #'lsp-rust--analyzer-run-single)
+                                          ("rust-analyzer.debugSingle" #'lsp-rust--analyzer-debug-lens)
+                                          ("rust-analyzer.showReferences" #'lsp-rust--analyzer-show-references))
+                     :library-folders-fn (lambda (_workspace) lsp-rust-library-directories)
+                     :after-open-fn (lambda ()
+                                      (when lsp-rust-analyzer-server-display-inlay-hints
+                                        (lsp-rust-analyzer-inlay-hints-mode)))
+                     :ignore-messages nil
+                     :server-id 'rust-analyzer-remote
+                     :custom-capabilities `((experimental . ((snippetTextEdit . ,(and lsp-enable-snippet (featurep 'yasnippet)))))))))
 
 ;;; projectile
 
