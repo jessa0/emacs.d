@@ -305,7 +305,9 @@
  '(projectile-enable-idle-timer t)
  '(projectile-globally-ignored-directories
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd" "target" ".cargo"))
+ '(projectile-per-project-compilation-buffer t)
  '(projectile-project-search-path '(("~/work" . 1)))
+ '(projectile-run-use-comint-mode t)
  '(projectile-sort-order 'recently-active)
  '(projectile-switch-project-action 'projectile-vc)
  '(read-quoted-char-radix 10)
