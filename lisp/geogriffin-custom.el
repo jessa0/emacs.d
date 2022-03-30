@@ -38,7 +38,7 @@
  '(compilation-always-kill t)
  '(compilation-context-lines 5)
  '(compilation-scroll-output 'first-error)
- '(compilation-skip-threshold 2)
+ '(compilation-skip-threshold 1)
  '(compilation-window-height 10)
  '(create-lockfiles nil)
  '(custom-enabled-themes '(deeper-blue))
