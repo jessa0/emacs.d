@@ -152,7 +152,7 @@
  '(lsp-ui-flycheck-enable t)
  '(lsp-ui-sideline-delay 1.0)
  '(lsp-ui-sideline-ignore-duplicate t)
- '(lsp-ui-sideline-show-code-actions nil)
+ '(lsp-ui-sideline-show-code-actions t)
  '(lsp-ui-sideline-show-diagnostics nil)
  '(lsp-ui-sideline-show-hover t)
  '(lsp-ui-sideline-show-symbol nil)
