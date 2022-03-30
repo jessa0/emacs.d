@@ -88,6 +88,9 @@
   :config
   (setq lsp-sourcekit-executable "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp"))
 
+(use-package typescript
+  :mode ("\\.tsx\\'" . typescript-mode))
+
 ;;; projectile
 
 (use-package projectile
