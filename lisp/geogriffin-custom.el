@@ -347,6 +347,7 @@
  '(use-file-dialog nil)
  '(view-read-only t)
  '(view-try-extend-at-buffer-end t)
+ '(warning-suppress-log-types '((comp)))
  '(wdired-allow-to-change-permissions 'advanced)
  '(wdired-use-dired-vertical-movement 'sometimes)
  '(which-key-idle-delay 1.0)
