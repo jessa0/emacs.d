@@ -246,6 +246,7 @@
 
 (global-set-key (kbd "C-z")    #'undo)
 (global-set-key (kbd "M-o")    #'other-window)
+(global-set-key (kbd "M-`")    #'other-frame)
 (global-set-key (kbd "M-0")    #'kill-buffer-and-window)
 (global-set-key (kbd "M-1")    #'delete-other-windows)
 (global-set-key (kbd "M-2")    #'split-window-vertically)
