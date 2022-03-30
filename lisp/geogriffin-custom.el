@@ -79,6 +79,13 @@
  '(flycheck-indication-mode 'right-fringe)
  '(flycheck-keymap-prefix "c")
  '(flycheck-mode-line-prefix "Fly")
+ '(forge-owned-accounts
+   '(("jessa0")
+     ("container-build")
+     ("glopfile")
+     ("rustunnel")
+     ("simple-raft-rs")
+     ("voice-analyzer")))
  '(frame-auto-hide-function 'delete-frame)
  '(fringe-mode nil nil (fringe))
  '(gc-cons-threshold 100000000)
