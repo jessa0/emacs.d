@@ -157,6 +157,12 @@
  '(lsp-ui-sideline-show-diagnostics nil)
  '(lsp-ui-sideline-show-hover t)
  '(lsp-ui-sideline-show-symbol nil)
+ '(magit-bury-buffer-function 'magit-restore-window-configuration)
+ '(magit-commit-squash-confirm nil)
+ '(magit-completing-read-function 'magit-ido-completing-read)
+ '(magit-copy-revision-abbreviated t)
+ '(magit-ediff-use-indirect-buffers t)
+ '(magit-save-repository-buffers 'dontask)
  '(menu-bar-mode nil)
  '(mode-line-format
    '("%e" mode-line-client mode-line-modified mode-line-remote " " mode-line-buffer-identification " " mode-line-position
