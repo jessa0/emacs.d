@@ -26,7 +26,7 @@
    '(company-capf company-files
                   (company-gtags company-keywords)))
  '(company-frontends
-   '(company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend company-preview-common-frontend))
+   '(company-pseudo-tooltip-unless-just-one-frontend company-echo-metadata-frontend company-preview-if-just-one-frontend))
  '(company-idle-delay 0)
  '(company-minimum-prefix-length 1)
  '(company-require-match ''company-explicit-action-p)
