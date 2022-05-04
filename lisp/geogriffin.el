@@ -60,6 +60,7 @@
                ("C-c l ^"                     . #'lsp-rust-analyzer-join-lines)
                ("C-c l T i"                   . #'lsp-rust-analyzer-inlay-hints-mode)
                ("C-c l G c"                   . #'lsp-rust-analyzer-open-cargo-toml)
+               ("C-c l w t"                   . #'geogriffin-lsp-rust-analyzer-change-cargo-target)
                ([remap xref-find-definitions] . #'lsp-find-definition)
                ([remap xref-find-references]  . #'lsp-find-references)))
   :config
@@ -299,6 +300,23 @@
   "Align the current region of colon-separated key-value lines. BEG and END mark the limits of the region."
   (interactive (list (region-beginning) (region-end)))
   (align-regexp beg end "\\(:\\s-*\\) "))
+
+(defun geogriffin-lsp-rust-analyzer-change-cargo-target (workspace target)
+  "Restart lsp rust-analyzer WORKSPACE with a different cargo TARGET triple."
+  (interactive
+   (list
+    (lsp--read-workspace)
+    (completing-read
+     "Cargo target triple: "
+     (let ((rustup-targets (shell-command-to-string "rustup target list --installed 2> /dev/null")))
+       (split-string (or rustup-targets lsp-rust-analyzer-cargo-target) "\n" t))
+     nil
+     'confirm
+     nil
+     'geogriffin-lsp-rust-analyzer-change-cargo-target-history
+     lsp-rust-analyzer-cargo-target)))
+  (setq lsp-rust-analyzer-cargo-target target)
+  (lsp-workspace-restart workspace))
 
 ;;; misc variables
 
