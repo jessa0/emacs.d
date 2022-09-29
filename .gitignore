@@ -15,7 +15,7 @@
 /eln-cache
 /eshell/history
 /eshell/lastdir
-/forge-database.sqlite
+/forge-database*
 /history
 /ido.last
 /projectile-bookmarks.eld
@@ -41,4 +41,4 @@
 /.dap-breakpoints
 /undohist/
 /url/
-/.persistent-scratch
+/.persistent-scratch*
