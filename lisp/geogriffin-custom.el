@@ -99,7 +99,7 @@
  '(global-subword-mode t)
  '(global-whitespace-mode t)
  '(grep-command
-   "grep --color -nH --null --exclude=*~ --exclude-dir=.git -e ")
+   "grep --color -nH --null --exclude=\"*~\" --exclude-dir=.git -e ")
  '(grep-find-command
    '("find . -type f -exec grep --color -nH --null --exclude=*~ --exclude-dir=.git -e /dev/null \\{\\} +" . 80))
  '(gud-tooltip-mode t)
