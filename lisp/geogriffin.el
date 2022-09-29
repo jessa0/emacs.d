@@ -97,7 +97,8 @@
 (use-package projectile
   :delight '(:eval (concat " " (projectile-project-name)))
   :bind (:map projectile-mode-map
-              (("C-c p" . #'projectile-command-map)))
+              (("C-c p" . #'projectile-command-map)
+               ("C-c p x x" . #'projectile-run-command-in-root)))
   :config
   (projectile-mode +1)
   (setq compilation-buffer-name-function   #'projectile-compilation-buffer-name)
