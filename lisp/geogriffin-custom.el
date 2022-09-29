@@ -165,7 +165,6 @@
  '(magit-commit-squash-confirm nil)
  '(magit-completing-read-function 'magit-ido-completing-read)
  '(magit-copy-revision-abbreviated t)
- '(magit-ediff-use-indirect-buffers t)
  '(magit-save-repository-buffers 'dontask)
  '(menu-bar-mode nil)
  '(mode-line-format
