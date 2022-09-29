@@ -20,6 +20,7 @@
  '(bookmark-save-flag 1)
  '(c-basic-offset 2)
  '(cargo-process--command-clippy "+nightly clippy")
+ '(cargo-process--enable-rust-backtrace t)
  '(column-number-mode t)
  '(comment-column 80)
  '(comment-fill-column 160)
