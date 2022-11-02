@@ -100,7 +100,7 @@
  '(global-semantic-idle-local-symbol-highlight-mode nil nil (semantic/idle))
  '(global-semantic-idle-summary-mode nil)
  '(global-subword-mode t)
- '(global-whitespace-mode t)
+ '(global-whitespace-mode nil)
  '(grep-command
    "grep --color -nH --null --exclude=\"*~\" --exclude-dir=.git -e ")
  '(grep-find-command
