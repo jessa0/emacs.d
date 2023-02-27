@@ -140,6 +140,7 @@
  '(lsp-lens-enable t)
  '(lsp-prefer-flymake nil)
  '(lsp-restart 'ignore)
+ '(lsp-rust-analyzer-binding-mode-hints t)
  '(lsp-rust-analyzer-cargo-load-out-dirs-from-check t)
  '(lsp-rust-analyzer-cargo-override-command ["cargo" "+nightly" "clippy" "--message-format=json"])
  '(lsp-rust-analyzer-cargo-run-build-scripts t)
@@ -147,6 +148,8 @@
  '(lsp-rust-analyzer-display-parameter-hints t)
  '(lsp-rust-analyzer-download-url
    "https://github.com/rust-analyzer/rust-analyzer/releases/download/nightly/rust-analyzer-linux")
+ '(lsp-rust-analyzer-import-granularity "item")
+ '(lsp-rust-analyzer-imports-merge-glob nil)
  '(lsp-rust-analyzer-max-inlay-hint-length 20)
  '(lsp-rust-analyzer-proc-macro-enable t)
  '(lsp-rust-clippy-preference "on")
