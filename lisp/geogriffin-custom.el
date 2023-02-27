@@ -325,6 +325,13 @@
  '(rust-format-on-save t)
  '(rust-format-show-buffer nil)
  '(rust-indent-method-chain t)
+ '(safe-local-variable-values
+   '((lsp-rust-analyzer-cargo-override-command .
+                                               ["cargo" "+nightly-2022-11-03" "clippy" "--message-format=json"])
+     (lsp-rust-analyzer-server-command "~/.rustup/toolchains/nightly-2022-11-03-aarch64-apple-darwin/bin/rust-analyzer")
+     (lsp-rust-analyzer-cargo-target . "wasm32-unknown-unknown")
+     (lsp-rust-features .
+                        ["ffi"])))
  '(save-place-mode t)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
