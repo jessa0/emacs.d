@@ -325,7 +325,6 @@
  '(rust-format-on-save t)
  '(rust-format-show-buffer nil)
  '(rust-indent-method-chain t)
- '(rust-rustfmt-switches nil)
  '(save-place-mode t)
  '(savehist-mode t)
  '(scroll-bar-mode nil)
