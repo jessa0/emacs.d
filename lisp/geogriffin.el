@@ -327,6 +327,9 @@
 
 (setq frame-title-format '(buffer-file-name "%f" ("%b")))
 
+;; Allow saving risky local variable values
+(advice-add 'risky-local-variable-p :override #'ignore)
+
 ;; Improve LSP performance per their recommendation
 (setq read-process-output-max (* 1024 1024))
 
